@@ -112,24 +112,7 @@
   
   
       <script src="https://unpkg.com/spiritjs/dist/spirit.min.js"></script>
-      <script>
-        (async () => {
-          await spirit.setup()
-
-          spirit.create(
-
-            // copy paste clipboard (Menu File > Copy To Clipboard)
-
-            {"version_app":"0.11.11","version_extension":"1.2.8","version_runtime":"2.0.5","groups":[{"name":"animation-one","timeScale":1,"timelines":[{"type":"dom","props":{"scaleX":{"0.5013297872340425s":"1.8","1.0018173758865248s":"1","1.7518173758865243s":"1"},"scaleY":{"0.5013297872340425s":"2.2","1.0018173758865248s":"1","1.7518173758865243s":"1"}},"label":"small-rectangle","path":"*[local-name()='g'][1]/*[local-name()='g'][1]/*[local-name()='rect'][2]"}]}]}
-
-
-          ).each(group => {
-            const tl = group.construct()
-            tl.eventCallback('onComplete', () => tl.play(0))
-            tl.play()
-          })
-        })()
-      </script>
+      
       <script src="js/scripts.js"></script>
 </body>
 </html>
