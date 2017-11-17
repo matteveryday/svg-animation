@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/basscss.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,700|Rubik:400,900" rel="stylesheet">
+  <script src="https://unpkg.com/spiritjs/dist/spirit.js"></script>
   
 </head>
 
@@ -111,16 +112,21 @@
   </div>
   
   
-      <script src="https://unpkg.com/spiritjs/dist/spirit.min.js"></script>
+      
       <script>
-  
-      spirit.setup().then(() => { // load from CDN
-        // your code here..
-        // for example spirit.create({...})  
-
-        spirit.load('./json/animation-test.json').then(groups => {
-          groups.at(0).construct().play() // play first group
-        })
+      var animation = {"version_app":"0.11.11","version_extension":"1.2.8","version_runtime":"2.0.5","groups":[{"name":"animation-test","timeScale":1,"timelines":[{"type":"dom","props":{"scaleX":{"0.5s":"1.8","0.9993351063829788s":"1"},"scaleY":{"0.5s":"2.2","0.9993351063829788s":"1"}},"label":"rectangle","path":"*[local-name()='svg'][1]/*[local-name()='g'][1]/*[local-name()='g'][1]/*[local-name()='rect'][2]"}]}]}
+          
+          
+        spirit.setup().then(() => { 
+          console.log("here!!")
+          spirit.create(animation).then(groups => {
+            groups.at(0).construct().play() // play first group
+          })
+//        spirit.load('./json/animation-test.json').then(groups => {
+//          console.log("there!!")
+//          console.log(groups.at(0))
+//          groups.at(0).construct().play() // play first group
+//        })
 
       })
   
