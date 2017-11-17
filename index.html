@@ -112,8 +112,20 @@
   
   
       <script src="https://unpkg.com/spiritjs/dist/spirit.min.js"></script>
-      
-      <script src="js/scripts.js"></script>
+      <script>
+  
+      spirit.setup().then(() => { // load from CDN
+        // your code here..
+        // for example spirit.create({...})  
+
+        spirit.load('./json/animation-one.json').then(groups => {
+          groups.at(0).construct().play() // play first group
+        })
+
+      })
+  
+      </script>
+<!--      <script src="js/scripts.js"></script>-->
 </body>
 </html>
 
