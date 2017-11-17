@@ -1,0 +1,17 @@
+font-family: 'Roboto Mono', monospace;
+font-family: 'Rubik', sans-serif;
+
+body {
+  color: black;
+}
+
+h1, h2, h3 {
+  font-family: 'Rubik', sans-serif;
+}
+h4, h5, h6 {
+  font-family: 'Roboto Mono', monospace;
+}
+
+p {
+  font-family: 'Roboto Mono', monospace;
+}
