@@ -108,6 +108,27 @@
           <h5>animation three</h5>
         </div>
       
+      <div class="col col-4 center">
+          <div class="mt4 fit">
+  
+            <svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+                <desc>Created with Sketch.</desc>
+                <defs></defs>
+                <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Collage-Icon" stroke="#0975C6" stroke-width="4">
+                        <rect id="Top-Right" x="28" y="2" width="16" height="16"></rect>
+                        <rect id="Bottom-Left" x="2" y="46" width="16" height="16"></rect>
+                        <rect id="Bottom-RIght" x="28" y="28" width="16" height="34"></rect>
+                        <rect id="Bottom-RIght-Copy" x="2" y="2" width="16" height="34"></rect>
+                    </g>
+                </g>
+            </svg>
+            
+          </div>
+          <h5>animation four</h5>
+        </div>
+      
     </div>
   </div>
   
@@ -115,21 +136,22 @@
       
       <script src="https://unpkg.com/spiritjs/dist/spirit.min.js"></script>
       <script>
-        (async () => {
-          await spirit.setup()
-
-          spirit.create(
-
-            // copy paste clipboard (Menu File > Copy To Clipboard)
-            {"version_app":"0.11.12","version_extension":"1.2.11","version_runtime":"2.0.6","groups":[{"name":"animation-test","timeScale":1,"timelines":[{"type":"dom","props":{"scaleX":{"0s":"1","0.5s":"1.8","1s":"1","1.7546542553191489s":"1"},"scaleY":{"0s":"1","0.5s":"2.2","1s":"1","1.7546542553191489s":"1"}},"label":"rectangle-small","path":"div[1]/div[1]/div[2]/div[1]/*[local-name()='svg'][1]/*[local-name()='g'][1]/*[local-name()='g'][1]/*[local-name()='rect'][2]"}]},{"name":"animation-three","timeScale":1,"timelines":[{"type":"dom","props":{"opacity":{"0s":"0","0.17952127659574468s":"1","1.5020390070921998s":"1","2.244858156028369s":"1"},"y":{"0s":"30px","0.17952127659574468s":"0","1.5020390070921998s":"0","2.244858156028369s":"0"}},"label":"div/div/div[4]/div/svg/g/g/g/rect","path":"div[1]/div[1]/div[4]/div[1]/*[local-name()='svg'][1]/*[local-name()='g'][1]/*[local-name()='g'][1]/*[local-name()='g'][1]/*[local-name()='rect'][1]"},{"type":"dom","props":{"opacity":{"0s":"0","0.4920212765957447s":"0","0.6881648936170213s":"1","2.248049645390072s":"1"},"y":{"0s":"30","0.49069148936170215s":"30px","0.6881648936170213s":"0","2.245390070921987s":"0"}},"label":"div/div/div[4]/div/svg/g/g/g/rect[2]","path":"div[1]/div[1]/div[4]/div[1]/*[local-name()='svg'][1]/*[local-name()='g'][1]/*[local-name()='g'][1]/*[local-name()='g'][1]/*[local-name()='rect'][2]"},{"type":"dom","props":{"opacity":{"0s":"0","0.9986702127659575s":"0","1.1742021276595744s":"1","2.2493794326241145s":"1"},"y":{"0s":"30","0.9986702127659575s":"30","1.1742021276595747s":"0","2.250709219858157s":"0"}},"label":"div/div/div[4]/div/svg/g/g/g/rect[3]","path":"div[1]/div[1]/div[4]/div[1]/*[local-name()='svg'][1]/*[local-name()='g'][1]/*[local-name()='g'][1]/*[local-name()='g'][1]/*[local-name()='rect'][3]"},{"type":"dom","props":{"opacity":{"0s":"0","0.9973404255319149s":"0","1.175531914893617s":"1","2.248049645390072s":"1"},"y":{"0s":"30","0.9986702127659575s":"30","1.175531914893617s":"0","2.250709219858157s":"0"}},"label":"div/div/div[4]/div/svg/g/g/g/g/rect","path":"div[1]/div[1]/div[4]/div[1]/*[local-name()='svg'][1]/*[local-name()='g'][1]/*[local-name()='g'][1]/*[local-name()='g'][1]/*[local-name()='g'][1]/*[local-name()='rect'][1]"},{"type":"dom","props":{"opacity":{"0s":"0","0.9973404255319149s":"0","1.1742021276595742s":"1","2.250709219858157s":"1"},"y":{"0s":"30","0.9973404255319149s":"30","1.1728723404255321s":"0","2.250709219858157s":"0"}},"label":"div/div/div[4]/div/svg/g/g/g/g/path","path":"div[1]/div[1]/div[4]/div[1]/*[local-name()='svg'][1]/*[local-name()='g'][1]/*[local-name()='g'][1]/*[local-name()='g'][1]/*[local-name()='g'][1]/*[local-name()='path'][1]"}]}]}
-            
-          ).each(group => {
-            const tl = group.construct()
-            tl.eventCallback('onComplete', () => tl.play(0))
-            tl.play()
-          })
-        })()
+        spirit.loadAnimation({
+          loop: true,
+          path: 'json/animation-four.json'
+        })
+        spirit.loadAnimation({
+          loop: true,
+          path: 'json/animation-test.json'
+        })
+        spirit.loadAnimation({
+          loop: true,
+          path: 'json/animation-three.json'
+        })
       </script>
+      
+
+  
 <!--      <script src="js/scripts.js"></script>-->
 </body>
 </html>
